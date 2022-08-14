@@ -39,6 +39,10 @@ The steps needed to derive the Differential Dynamic Programming scheme are detai
 
 This section details the implementation of the DDP scheme derived in the previous section. DDP will be applied to an inverted pendulum, and a cart pole system. In general each implementation will utilize the  pseudocode detailed in the table below: 
 
+推导微分动态编程方案所需的步骤详见本[来源]（https://ieeexplore.ieee.org/document/5530971）。
+
+本节详细介绍了上一节中得出的DDP方案的实施。DDP将被应用于一个倒立摆和一个车杆系统。一般来说，每个实现都将利用下表详述的伪代码。
+
 | Steps | Description                                                  | |
 | ----- | ------------------------------------------------------------ |------------------------------------------------|
 | 1     | Given the nominal states and controls, determine the linearized dynamics of the system |给出名义状态和控制，确定系统的线性化动力学特性 |
