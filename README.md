@@ -1,8 +1,11 @@
-# Differential-Dynamic-Programming-DDP
+# 差分动态规划-DDP
+
 An introduction of DDP and implementation in python
+
 # Differential Dynamic Programming
 
 This project details the formulation of Differential Dynamic Programming in discrete time. Implementation of the algorithms for various systems including an inverted pendulum and a cart-pole have also been documented in this report. 
+该项目详细介绍了离散时间的微分动态编程的表述。本报告还将尝试在python中实现各种系统的算法，包括倒立摆和车杆的算法。
 
 ## Overview
 
@@ -36,15 +39,15 @@ The steps needed to derive the Differential Dynamic Programming scheme are detai
 
 This section details the implementation of the DDP scheme derived in the previous section. DDP will be applied to an inverted pendulum, and a cart pole system. In general each implementation will utilize the  pseudocode detailed in the table below: 
 
-| Steps | Description                                                  |
-| ----- | ------------------------------------------------------------ |
-| 1     | Given the nominal states and controls, determine the linearized dynamics of the system |
-| 2     | Calculate the second order expansion of the state value function |
-| 3     | Back-propagate the value function, its gradient and its hessian |
-| 4     | Update the controls using the optimal control correction     |
-| 5     | Calculate the new optimal trajectory by applying the new controls to the system dynamics |
-| 6     | Set the new nominal trajectory and control as the calculated optimal trajectory and control |
-| 7     | Check for convergence, repeat steps 1-7 until converged      |
+| Steps | Description                                                  | |
+| ----- | ------------------------------------------------------------ |------------------------------------------------|
+| 1     | Given the nominal states and controls, determine the linearized dynamics of the system |给出名义状态和控制，确定系统的线性化动力学特性 |
+| 2     | Calculate the second order expansion of the state value function |计算状态值函数的二阶扩展|
+| 3     | Back-propagate the value function, its gradient and its hessian | 反向传播价值函数、其梯度和其海西。|
+| 4     | Update the controls using the optimal control correction     | 使用最佳控制修正来更新控制 |
+| 5     | Calculate the new optimal trajectory by applying the new controls to the system dynamics | 通过对系统动力学应用新的控制，计算新的最佳轨迹|
+| 6     | Set the new nominal trajectory and control as the calculated optimal trajectory and control | 将新的额定轨迹和控制设置为计算出的最佳轨迹和控制|
+| 7     | Check for convergence, repeat steps 1-7 until converged      |  检查收敛情况，重复步骤1-7，直到收敛。|
 
 
 #### Inverted Pendulum 
